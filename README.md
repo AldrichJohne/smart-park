@@ -88,3 +88,10 @@ http://localhost:8080/api/v1/vehicle/{license-plate}/check-out
 ---
 
 Postman Collection located at smartpark/postman/
+
+---
+NOTES
+-
+The application automatically populates the Parking_Lot table and Vehicle table upon startup, please refer to the src/main/java/com/aldrich/ulabo/smartpark/config/DataInitializer.java
+
+The application uses H2 database, it resets every startup
