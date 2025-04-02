@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "c70f4dcf-ebe4-42d1-9261-5ca9d8d0f9b8",
+		"name": "Smart Park",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23320580"
+	},
+	"item": [
+		{
+			"name": "view parking lot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/parking-lot/LOT01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"parking-lot",
+						"LOT01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register parking lot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lotId\": \"LOT03\",\n    \"location\": \"Megamall\",\n    \"capacity\": 1,\n    \"occupiedSpace\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/parking-lot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"parking-lot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehicle/NNN-1111/check-in/LOT01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"NNN-1111",
+						"check-in",
+						"LOT01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licensePlate\": \"ZZZ-2222\",\n    \"type\": \"TRUCK\",\n    \"ownerName\": \"AJ Ramos\",\n    \"parkingLot\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all vehicles in a parking lot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/parking-lot/vehicles/LOT01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"parking-lot",
+						"vehicles",
+						"LOT01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/vehicle/ZZZ-2222/check-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"ZZZ-2222",
+						"check-out"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
